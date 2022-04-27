@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PodcastApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PodcastApplication.class, args);
-		System.out.println("Estou funcionando");
+		SpringApplication.run(PodcastApplication.class, args);;
 	}
 
 }
