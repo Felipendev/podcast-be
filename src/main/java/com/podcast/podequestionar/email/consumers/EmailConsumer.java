@@ -15,16 +15,16 @@ import org.springframework.stereotype.Component;
 @Log4j2
 public class EmailConsumer {
 
-    private EmailService emailService;
-
-    @RabbitListener(queues = "${spring.rabbitmq.queue}")
-    public void listen(@Payload EmailDto emailDto) {
-        log.info("[start] EmailConsumer - listen");
-        EmailModel emailModel = new EmailModel();
-        BeanUtils.copyProperties(emailDto, emailModel);
-        emailService.sendEmail(emailModel);
-        System.out.println("Email Status: " + emailModel.getStatusEmail().toString());
-        log.info("[finish] EmailConsumer - listen");
-
-    }
+//    private EmailService emailService;
+//
+//    @RabbitListener(queues = "${spring.rabbitmq.queue}")
+//    public void listen(@Payload EmailDto emailDto) {
+//        log.info("[start] EmailConsumer - listen");
+//        EmailModel emailModel = new EmailModel();
+//        BeanUtils.copyProperties(emailDto, emailModel);
+//        emailService.sendEmail(emailModel);
+//        System.out.println("Email Status: " + emailModel.getStatusEmail().toString());
+//        log.info("[finish] EmailConsumer - listen");
+//
+//    }
 }

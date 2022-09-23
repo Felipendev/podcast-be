@@ -11,22 +11,22 @@ import org.springframework.context.annotation.Configuration;
 @Log4j2
 public class RabbitMQConfig {
 
-    @Value("${spring.rabbitmq.queue}")
-    private String queue;
-
-    @Bean
-    public Queue queue() {
-        log.info("[start] RabbitMQConfig - queue");
-        Queue queue = new Queue(this.queue, true);
-        log.info("[finish] RabbitMQConfig - queue");
-        return queue;
-    }
-
-    @Bean
-    public Jackson2JsonMessageConverter messageConverter() {
-        log.info("[start] RabbitMQConfig - MessageConverter");
-        Jackson2JsonMessageConverter messageConverter = new Jackson2JsonMessageConverter();
-        log.info("[finish] RabbitMQConfig - MessageConverter");
-        return messageConverter;
-    }
+//    @Value("${spring.rabbitmq.queue}")
+//    private String queue;
+//
+//    @Bean
+//    public Queue queue() {
+//        log.info("[start] RabbitMQConfig - queue");
+//        Queue queue = new Queue(this.queue, true);
+//        log.info("[finish] RabbitMQConfig - queue");
+//        return queue;
+//    }
+//
+//    @Bean
+//    public Jackson2JsonMessageConverter messageConverter() {
+//        log.info("[start] RabbitMQConfig - MessageConverter");
+//        Jackson2JsonMessageConverter messageConverter = new Jackson2JsonMessageConverter();
+//        log.info("[finish] RabbitMQConfig - MessageConverter");
+//        return messageConverter;
+//    }
 }
